@@ -9,21 +9,67 @@
 body,h1,h5 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 .bgimg {
-    background-image: url('/w3images/onepage_restaurant.jpg');
+    background-image: url('https://media.giphy.com/media/GdnM7vzEmS3oQ/giphy.gif');
     min-height: 100%;
+    width: 100%;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    /* background-color: blueviolet; */
 }
+@-webkit-keyframes pulse {
+0% {background-color:#00CCFF;}
+10% {background-color: #0000FF;}
+20% {background-color: #9966FF;}
+30% {background-color: #FF9999;}
+40% {background-color: #FF0000;}
+50% {background-color: #FF9966;}
+60% {background-color: #FF8200;}
+70% {background-color: #FFFF66;}
+80% {background-color: #99FF66;}
+90% {background-color: #00FF00;}
+100% {background-color: #00CCFF;}
+
+}
+
+@-moz-keyframes pulse_m {
+0% {background-color:#00CCFF;}
+10% {background-color: #0000FF;}
+20% {background-color: #9966FF;}
+30% {background-color: #FF9999;}
+40% {background-color: #FF0000;}
+50% {background-color: #FF9966;}
+60% {background-color: #FF8200;}
+70% {background-color: #FFFF66;}
+80% {background-color: #99FF66;}
+90% {background-color: #00FF00;}
+100% {background-color: #00CCFF;}
+
+
+}
+
+.bubby  {
+  background: linear-gradient(to bottom right, red, yellow);}
+
+
+html {-webkit-animation: pulse 80s infinite alternate;
+      -moz-animation: pulse_m 80s infinite alternate;
+    background-color: blueviolet;}
 </style>
 <body>
 
 <div class="bgimg w3-display-container w3-text-white">
-  <div class="w3-display-middle w3-jumbo">
-    <p>logo</p>
+  <div class="w3-display-middle w3-jumbo  w3-opacity-min w3-gray w3-round">
+       <img class="logo w3-image" src="PureCottonMed.png" style="opacity:1;width:100%;max-width:650px">
+ <p></p>
+
   </div>
   <div class="w3-display-topleft w3-container w3-xlarge">
-    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">menu</button></p>
-    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">contact</button></p>
+    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button bubby">about</button></p>
+    <p><button onclick="document.getElementById('services').style.display='block'" class="w3-button bubby">services</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button bubby">contact</button></p>
+    
   </div>
   <div class="w3-display-bottomleft w3-container">
     <p class="w3-xlarge">monday - friday 10-23 | saturday 14-02</p>
@@ -35,16 +81,27 @@ body, html {height: 100%}
 <!-- Menu Modal -->
 <div id="menu" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-black w3-display-container">
+    <div class="w3-container w3-display-container">
       <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
-      <h1>Starters</h1>
+      <h1>About Me</h1>
     </div>
-    <div class="w3-container">
-      <h5>Tomato Soup <b>$2.50</b></h5>
-      <h5>Chicken Salad <b>$3.50</b></h5>
-      <h5>Bread and Butter <b>$1.00</b></h5>
+    <!-- About me : I have been an on going event planner for 5 years now . 
+    Working with many lovely souls along my amazing journeys as an artist
+     myself. I aim for organic artistic feel with every event i personally
+      attend to . A natural feel as if your actually in the atmosphere created.
+     My job & gift to every great cause and event is to create it .For you , 
+     with you every step of the way . Making your event special to you and your
+     guests through artistic beauty . Grating every atmosphere  a time to
+      be remembered.  -->
+    <div class="w3-center w3-container">
+      <h5>I have been an on going event planner for 5 years now.</h5>
+      <h5>Working with many lovely souls along my amazing journeys as an artist.</h5>
+      <h5>I aim for organic artistic feel with every event I take on as a project.</h5>
+      <h5>A natural feel as if your actually in the atmosphere created.</h5>
+      <h5>My job & gift to every great cause and event is to create it for you.</h5>
+      <h5>Making every event one to be remembered.</h5>
     </div>
-    <div class="w3-container w3-black">
+    <!-- <div class="w3-container w3-black">
       <h1>Main Courses</h1>
     </div>
     <div class="w3-container">
@@ -62,14 +119,27 @@ body, html {height: 100%}
       <h5>Ice cream <b>$2.00</b></h5>
       <h5>Chocolate Cake <b>$4.00</b></h5>
       <h5>Cheese <b>$5.50</b></h5>
-    </div>
+    </div> -->
   </div>
 </div>
-
+<div id="services" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom">
+      <div class="w3-container w3-display-container">
+        <span onclick="document.getElementById('services').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+        <h1>Services Offered:</h1>
+      </div>
+      <div class="w3-center w3-container">
+          <h5>Fundraisers, Personal Parties, Electronic Music Events,</h5>
+          <h5>Birthdays, Festivals,  Business Openings, Bachelorette Parties,</h5>
+          <h5>Bachelor Parties, Company Parties, Set Designs And Open To Creating Something Brand New!</h5>
+          <h5><small></small></h5>
+        </div>
+      </div>
+    </div>
 <!-- Contact Modal -->
 <div id="contact" class="w3-modal">
   <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-black">
+    <div class="w3-container bubby">
       <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
       <h1>Contact</h1>
     </div>
@@ -86,6 +156,15 @@ body, html {height: 100%}
   </div>
 </div>
 
+<script>
+  var modal = document.getElementsByClassName ('w3-modal');
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 </body>
 </html>
 
